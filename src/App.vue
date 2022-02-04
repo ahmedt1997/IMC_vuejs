@@ -1,15 +1,18 @@
 <template>
 <!--  <SignupForm />-->
+
   <Imc/>
+  <DailyCalorie/>
 </template>
 
 <script>
 
 import Imc from "./components/Imc";
+import DailyCalorie from "./components/DailyCalorie";
 
 export default {
   name: 'App',
-  components: {Imc, }
+  components: {DailyCalorie, Imc}
 }
 </script>
 
