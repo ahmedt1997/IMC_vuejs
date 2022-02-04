@@ -1,8 +1,15 @@
 <template>
-<!--  <SignupForm />-->
 
-  <Imc/>
-  <DailyCalorie/>
+    <div id="nav">
+
+    <router-link :to="{ name: 'DailyCalorie' }">DailyCalorie</router-link>
+    <router-link :to="{ name: 'Imc' }">Imc</router-link>
+    <router-view/>
+  </div>
+
+
+<!--  <Imc/>-->
+<!--  <DailyCalorie/>-->
 </template>
 
 <script>
@@ -17,6 +24,27 @@ export default {
 </script>
 
 <style>
+
+
+
+#nav {
+  padding: 30px;
+}
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 4px;
+}
+#nav a.router-link-exact-active {
+  color: white;
+  background: crimson;
+}
+
+
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

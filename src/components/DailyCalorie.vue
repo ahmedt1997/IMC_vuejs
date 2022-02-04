@@ -1,13 +1,13 @@
 <template>
    <form @submit.prevent="handleSubmit">
     <label>poids (kg):</label>
-    <input type="number" v-model="poids" required>
+    <input type="number" v-model="poids" required min="10" max="300">
 
     <label>taille (cm):</label>
-    <input type="number" v-model="taille" required>
+    <input type="number" v-model="taille" required min="100" max="300">
 
     <label>age (ans):</label>
-    <input type="number" v-model="age" required>
+    <input type="number" v-model="age" required min="10" max="200">
 <!--    <div v-if="passwordError" class="error">{{ passwordError }}</div>-->
 
     <label>sex:</label>
@@ -41,7 +41,12 @@
 
   </form>
 
+  <span v-if="Resultat">
+
     {{parseFloat(Resultat).toFixed(2)}} calories
+
+  </span>
+
 
 
 
